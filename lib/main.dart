@@ -1,12 +1,14 @@
+import 'package:ecommerce/route/app_page.dart';
+import 'package:ecommerce/route/app_routes.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 
-// class colors {
-//   static const Color c1 = const Color(0xFF9381ff);
-//   static const Color c2 = const Color(0xFFb8b8ff);
-//   static const Color c3 = const Color(0xFFf8f7ff);
-// }
+class Appcolors {
+  static const Color c1 = const Color(0xFF9381ff);
+  static const Color c2 = const Color(0xFFb8b8ff);
+  static const Color c3 = const Color(0xFFf8f7ff);
+}
 
 
 void main() {
@@ -20,11 +22,19 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
+
       title: 'Flutter Demo',
+      debugShowCheckedModeBanner: false,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFF9381ff)),
         useMaterial3: true,
+        fontFamily: "Poppins",
       ),
+
+
+
+      initialRoute: AppRoutes.HOME,
+      getPages: AppPages.pages,
     );
   }
 }

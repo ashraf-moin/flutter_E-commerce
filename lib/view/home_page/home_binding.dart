@@ -1,11 +1,13 @@
-import 'package:ecommerce/view/home_page/Home_controller.dart';
+import 'package:ecommerce/view/home_page/home_controller.dart';
 import 'package:get/get.dart';
 
-class Homebinding extends Bindings{
+
+class HomeBinding  extends Bindings {
+
   @override
   void dependencies() {
-    Get.lazyPut<HomeController> (() => HomeController()
+    Get.lazyPut<HomeController>(
+            () => HomeController()
     );
   }
-
 }
