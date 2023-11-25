@@ -27,13 +27,13 @@ class MyApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
         colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFF9381ff)),
-        useMaterial3: true,
+        useMaterial3: false,
         fontFamily: "Poppins",
       ),
 
 
-
-      initialRoute: AppRoutes.HOME,
+       initialRoute: AppRoutes.ALLPRODUCT,
+      // initialRoute: AppRoutes.HOME,
       getPages: AppPages.pages,
     );
   }

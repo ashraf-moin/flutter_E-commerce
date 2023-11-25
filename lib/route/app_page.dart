@@ -1,4 +1,6 @@
 import 'package:ecommerce/route/app_routes.dart';
+import 'package:ecommerce/view/all_product_page/all_product_page.dart';
+import 'package:ecommerce/view/all_product_page/all_product_page_binding.dart';
 import 'package:ecommerce/view/home_page/home_page.dart';
 import 'package:ecommerce/view/home_page/home_binding.dart';
 import 'package:ecommerce/view/login_page/loginbinding.dart';
@@ -27,6 +29,14 @@ class AppPages{
   name: AppRoutes.HOME,
   page: () => const HomePage(),
   binding: HomeBinding()
+  ),
+
+
+
+  GetPage(
+  name: AppRoutes.ALLPRODUCT,
+  page: () => const AllProductPage(),
+  binding: AllProductPageBinding()
   ),
 
 
