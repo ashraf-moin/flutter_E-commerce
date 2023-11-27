@@ -5,7 +5,8 @@ import 'package:ecommerce/view/home_page/home_page.dart';
 import 'package:ecommerce/view/home_page/home_binding.dart';
 import 'package:ecommerce/view/login_page/loginbinding.dart';
 import 'package:ecommerce/view/login_page/login_page.dart';
-
+import 'package:ecommerce/view/product_details_page/product_detail.dart';
+import 'package:ecommerce/view/product_details_page/product_detail_binding.dart';
 import 'package:get/get.dart';
 
 
@@ -32,12 +33,20 @@ class AppPages{
   ),
 
 
-
   GetPage(
   name: AppRoutes.ALLPRODUCT,
   page: () => const AllProductPage(),
   binding: AllProductPageBinding()
   ),
+
+
+
+  GetPage(
+  name: AppRoutes.PRODUCTDRETAILS,
+  page: () => const ProductDetailsPage(),
+  binding: ProductDetailBinding()
+    ),
+
 
 
   ];

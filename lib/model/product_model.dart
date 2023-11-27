@@ -1,6 +1,3 @@
-// To parse this JSON data, do
-//
-//     final productModel = productModelFromJson(jsonString);
 
 import 'dart:convert';
 
@@ -13,8 +10,10 @@ class ProductModel {
   String? title;
   double? price;
   String? description;
-  Category? category;
+  String? category;
   String? image;
+  int? quantity;
+
   Rating? rating;
 
   ProductModel({
@@ -24,6 +23,7 @@ class ProductModel {
     this.description,
     this.category,
     this.image,
+    this.quantity,
     this.rating,
   });
 
@@ -32,8 +32,9 @@ class ProductModel {
     title: json["title"],
     price: json["price"]?.toDouble(),
     description: json["description"],
-    category: categoryValues.map[json["category"]]!,
+    category: json["category"],
     image: json["image"],
+    quantity:json["quantity"],
     rating: json["rating"] == null ? null : Rating.fromJson(json["rating"]),
   );
 
@@ -42,25 +43,12 @@ class ProductModel {
     "title": title,
     "price": price,
     "description": description,
-    "category": categoryValues.reverse[category],
+    "category": category,
     "image": image,
-    "rating": rating?.toJson(),
+    "quantity": quantity
   };
-}
 
-enum Category {
-  ELECTRONICS,
-  JEWELERY,
-  MEN_S_CLOTHING,
-  WOMEN_S_CLOTHING
 }
-
-final categoryValues = EnumValues({
-  "electronics": Category.ELECTRONICS,
-  "jewelery": Category.JEWELERY,
-  "men's clothing": Category.MEN_S_CLOTHING,
-  "women's clothing": Category.WOMEN_S_CLOTHING
-});
 
 class Rating {
   double? rate;
@@ -80,16 +68,4 @@ class Rating {
     "rate": rate,
     "count": count,
   };
-}
-
-class EnumValues<T> {
-  Map<String, T> map;
-  late Map<T, String> reverseMap;
-
-  EnumValues(this.map);
-
-  Map<T, String> get reverse {
-    reverseMap = map.map((k, v) => MapEntry(v, k));
-    return reverseMap;
-  }
 }
