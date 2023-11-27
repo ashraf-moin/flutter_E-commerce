@@ -16,73 +16,89 @@ class ProductDetailsPage extends GetView<ProductDetailController> {
       body: SafeArea(
         child: Padding(
           padding: EdgeInsets.all(16),
-
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
+          child: Stack(
             children: [
-              Stack(
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
-                  Container(
-                    margin: EdgeInsets.all(16),
-                    height: size.height * 0.3,
-                    width: size.width,
-                    child: controller.args.image == "null"
-                        ? Image.asset(AppImage.NO_IMAGE, fit: BoxFit.cover)
-                        : Image.network(controller.args.image!),
-                  ),
-                  Positioned(
-                    top: 10,
-                    right: 10,
-                    child: DecoratedBox(
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(20),
-                        color: Appcolors.c2,
+                  Stack(
+                    children: [
+                      Container(
+                        margin: EdgeInsets.all(16),
+                        height: size.height * 0.3,
+                        width: size.width,
+                        child: controller.args.image == "null"
+                            ? Image.asset(AppImage.NO_IMAGE, fit: BoxFit.cover)
+                            : Image.network(controller.args.image!),
                       ),
-                      child: Row(
-                        children: [
-                          const Icon(Icons.star, color: Colors.amber),
-                          const SizedBox(width: 12),
-                          Text(
-                            '${controller.args.rating!.rate ?? 0.00}',
-                            style: const TextStyle(
-                                fontSize: 14, fontWeight: FontWeight.bold),
+                      Positioned(
+                        top: 10,
+                        right: 10,
+                        child: DecoratedBox(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(20),
+                            color: Appcolors.c2,
                           ),
-                        ],
+                          child: Row(
+                            children: [
+                              const Icon(Icons.star, color: Colors.amber),
+                              const SizedBox(width: 12),
+                              Text(
+                                '${controller.args.rating!.rate ?? 0.00}',
+                                style: const TextStyle(
+                                    fontSize: 14, fontWeight: FontWeight.bold),
+                              ),
+                            ],
+                          ),
+                        ),
                       ),
+                    ],
+                  ),
+                  Container(
+                    width: size.width,
+                    color: Appcolors.c2,
+                    child: Text(
+                      (controller.args.category ?? "NO NAME").toUpperCase(),
+                      style: const TextStyle(
+                          fontSize: 20, fontWeight: FontWeight.bold),
                     ),
                   ),
-                ],
-              ),
-              Container(
-                width: size.width,
-                color: Appcolors.c2,
-                child: Text(
-                  (controller.args.category ?? "NO NAME").toUpperCase(),
-                  style:
-                      const TextStyle(fontSize: 20, fontWeight: FontWeight.bold),
-                ),
-              ),
-              const SizedBox(height: 10),
-              Text(
-                controller.args.title ?? "NO NAME",
-                style: const TextStyle(fontWeight: FontWeight.bold),
-              ),
-              const SizedBox(height: 8),
-              Text(
-                controller.args.description ?? "NO NAME",
-                style: const TextStyle(fontSize: 14),
-              ),
-              const SizedBox(height: 8),
-              Row(
-                children: [
+                  const SizedBox(height: 10),
                   Text(
-                    'USD ${controller.args.price ?? 0.00}',
-                    textAlign: TextAlign.end,
-                    style: const TextStyle(
-                        fontSize: 14, fontWeight: FontWeight.bold),
+                    controller.args.title ?? "NO NAME",
+                    style: const TextStyle(fontWeight: FontWeight.bold),
+                  ),
+                  const SizedBox(height: 8),
+                  Text(
+                    controller.args.description ?? "NO NAME",
+                    style: const TextStyle(fontSize: 14),
+                  ),
+                  const SizedBox(height: 8),
+                  Row(
+                    children: [
+                      Text(
+                        'USD ${controller.args.price ?? 0.00}',
+                        textAlign: TextAlign.end,
+                        style: const TextStyle(
+                            fontSize: 14, fontWeight: FontWeight.bold),
+                      ),
+                    ],
                   ),
                 ],
               ),
+              Positioned(
+                  bottom: 40,
+                  left: 0,
+                  right: 0,
+                  child: ElevatedButton(
+                      onPressed: () {
+                        ScaffoldMessenger.of(context).showSnackBar(
+                            SnackBar(
+                              content: Text("Item addded to cart!"),
+                          backgroundColor: Appcolors.c2,
+                        ));
+                      },
+                      child: const Text('Add To Cart')))
             ],
           ),
         ),
