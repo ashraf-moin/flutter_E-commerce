@@ -20,7 +20,7 @@ class AllProductPage extends GetView<AllProductController> {
         child: Obx(() =>
             Column(
               children: [
-                MySearchBar(controller: controller.searchcontroller),
+                MySearchBar(controller: controller.searchController),
                 const SizedBox(height: 8),
 
                 Expanded(
@@ -34,7 +34,6 @@ class AllProductPage extends GetView<AllProductController> {
                     mainAxisSpacing: 8.0, // spacing between rows
                     crossAxisSpacing: 8.0, // spacing between columns
                   ),
-
                   ),
                 )
               ],
@@ -97,12 +96,10 @@ class AllProductPage extends GetView<AllProductController> {
                             Icons.add_shopping_cart_outlined, color: Colors.green,),),
                       ],
                     ),
-
                   ],
                 ),
               ),
             ),
-
           ],
         ),
       ),

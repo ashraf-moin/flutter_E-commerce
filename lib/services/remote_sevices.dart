@@ -34,7 +34,52 @@ static final Dio _dio = Dio(
    
   }
 
+static Future<List<ProductModel>> getAllCategoriesList() async{
+  try{
 
+    Response response = await _dio.get(ApiEndPoint.ALL_PRODUCT_CATEGORIES);
+    var result = json.encode(response.data);
+    return productModelFromJson(result);
+
+
+
+
+  }catch (error){
+    rethrow;
+  }
+
+}
+
+static Future<List<ProductModel>> getAllCategoriesJeweleryList() async{
+  try{
+    Response response = await _dio.get(ApiEndPoint.ALL_PRODUCT_JEWELERY);
+    var result = json.encode(response.data);
+    return productModelFromJson(result);
+  }catch (error){
+    rethrow;
+  }
+}
+
+
+static Future<List<ProductModel>> getAllCategoriesElectronicsList() async {
+  try {
+    Response response = await _dio.get(ApiEndPoint.ALL_PRODUCT_ELECTRONICS);
+    var result = json.encode(response.data);
+    return productModelFromJson(result);
+  } catch (error) {
+    rethrow;
+  }
+}
+
+  static Future<List<ProductModel>> getAllList(String endPoint) async{
+    try{
+      Response response = await _dio.get(endPoint);
+      var result = json.encode(response.data);
+      return productModelFromJson(result);
+    }catch (error){
+      rethrow;
+    }
+  }
 
 
 

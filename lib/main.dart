@@ -1,5 +1,6 @@
 import 'package:ecommerce/route/app_page.dart';
 import 'package:ecommerce/route/app_routes.dart';
+import 'package:ecommerce/view/home_page/home_page.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -22,7 +23,6 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return GetMaterialApp(
-
       title: 'Flutter Demo',
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
@@ -31,10 +31,8 @@ class MyApp extends StatelessWidget {
         fontFamily: "Poppins",
       ),
 
-
-       // initialRoute: AppRoutes.DETAILS,
-      initialRoute: AppRoutes.ALLPRODUCT,
-      getPages: AppPages.pages,
+        initialRoute: AppRoutes.HOME,
+        getPages: AppPages.pages,
     );
   }
 }

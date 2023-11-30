@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class AllProductController extends GetxController{
-  TextEditingController searchcontroller = TextEditingController();
+  TextEditingController searchController = TextEditingController();
   RxList<ProductModel> rxProductList = RxList.empty();
   List<ProductModel> get productList => rxProductList.toList();
 
