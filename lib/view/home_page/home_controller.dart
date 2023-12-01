@@ -7,14 +7,16 @@ import 'package:get/get.dart';
 
 class HomeController extends GetxController {
 
-  var  valueAS = 'abcd'.obs;
+  // var  valueAS = 'abcd'.obs;
   TextEditingController searchController = TextEditingController();
   RxList<ProductModel> rxJewelery = RxList.empty();
   List<ProductModel> get jeweleryList => rxJewelery.toList();
   RxList<ProductModel> rxElectronics = RxList.empty();
   List<ProductModel> get electronicsList => rxElectronics.toList();
-
-
+  RxList<ProductModel> rxWomenCloth = RxList.empty();
+  List<ProductModel> get womenClothList => rxWomenCloth.toList();
+  RxList<ProductModel> rxMenCloth = RxList.empty();
+  List<ProductModel> get menClothList => rxMenCloth.toList();
 
   void getAllJewelery()async{
     List<ProductModel> listOfJewelery = await RemoteServices.getAllList(ApiEndPoint.ALL_PRODUCT_JEWELERY);
@@ -26,13 +28,22 @@ class HomeController extends GetxController {
     rxElectronics.assignAll(listOfElectronics);
   }
 
+  void getAllWomenCloth()async{
+    List<ProductModel> listOfWomenCloth = await RemoteServices.getAllCategoriesWomenClothList();
+    rxWomenCloth.assignAll(listOfWomenCloth);
+  }
+  void getAllMenCloth()async{
+    List<ProductModel> listOfMenCloth = await RemoteServices.getAllCategoriesMenClothList();
+    rxMenCloth.assignAll(listOfMenCloth);
 
-
+  }
   @override
   void onInit() {
     super.onInit();
     getAllJewelery();
     getAllElectronics();
+    getAllWomenCloth();
+    getAllMenCloth();
   }
 
   @override

@@ -15,9 +15,6 @@ static final Dio _dio = Dio(
 
  );
 
-
-
-
   static Future<List<ProductModel>> getAllProductList() async{
     try{
 
@@ -25,8 +22,6 @@ static final Dio _dio = Dio(
       var result = json.encode(response.data);
       return productModelFromJson(result);
 
-
-      
       
     }catch (error){
       rethrow;
@@ -40,9 +35,6 @@ static Future<List<ProductModel>> getAllCategoriesList() async{
     Response response = await _dio.get(ApiEndPoint.ALL_PRODUCT_CATEGORIES);
     var result = json.encode(response.data);
     return productModelFromJson(result);
-
-
-
 
   }catch (error){
     rethrow;
@@ -71,6 +63,24 @@ static Future<List<ProductModel>> getAllCategoriesElectronicsList() async {
   }
 }
 
+static Future<List<ProductModel>> getAllCategoriesWomenClothList() async {
+  try {
+    Response response = await _dio.get(ApiEndPoint.ALL_PRODUCT_WOMENCOlOTH);
+    var result = json.encode(response.data);
+    return productModelFromJson(result);
+  } catch (error) {
+    rethrow;
+  }
+}
+static Future<List<ProductModel>> getAllCategoriesMenClothList() async {
+  try {
+    Response response = await _dio.get(ApiEndPoint.ALL_PRODUCT_MENCOlOTH);
+    var result = json.encode(response.data);
+    return productModelFromJson(result);
+  } catch (error) {
+    rethrow;
+  }
+}
   static Future<List<ProductModel>> getAllList(String endPoint) async{
     try{
       Response response = await _dio.get(endPoint);
