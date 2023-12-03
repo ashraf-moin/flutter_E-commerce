@@ -29,5 +29,7 @@ class AppPages {
         name: AppRoutes.PRODUCTDRETAILS,
         page: () => const ProductDetailsPage(),
         binding: ProductDetailBinding()),
+
+
   ];
 }

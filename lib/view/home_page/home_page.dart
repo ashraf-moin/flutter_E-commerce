@@ -2,10 +2,10 @@ import 'package:ecommerce/main.dart';
 import 'package:ecommerce/route/app_routes.dart';
 import 'package:ecommerce/utils/app_images.dart';
 import 'package:ecommerce/view/home_page/home_controller.dart';
-import 'package:ecommerce/view/widgets/search_bar.dart';
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:sliver_tools/sliver_tools.dart';
+
 
 class HomePage extends GetView<HomeController> {
   const HomePage({super.key});
@@ -15,135 +15,134 @@ class HomePage extends GetView<HomeController> {
   Widget build(BuildContext context) {
     double deviceWidth = MediaQuery.of(context).size.width;
     return Scaffold(
-
         appBar: myAppBar(),
         body: Obx(() =>
             SingleChildScrollView(
           child: Column(
           children: [
             Container(
-              padding: EdgeInsets.all(8.0),
-              margin: EdgeInsets.all(8.0),
+              padding: const EdgeInsets.all(8.0),
+              margin: const EdgeInsets.all(8.0),
               width: deviceWidth,
               height: 50,
               color: Appcolors.c2,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text("Jewelery",
+                  const Text("Jewelery",
                     style: TextStyle(fontSize: 14, fontWeight: FontWeight
                         .bold, color: Appcolors.c3),),
                   IconButton(onPressed: () {
 
                   },
-                    icon: Icon(
+                    icon: const Icon(
                       Icons.arrow_right_alt_outlined, color: Colors.green,),),
                 ],
               ),
             ),
             GridView.builder(
               shrinkWrap: true,
-              physics: NeverScrollableScrollPhysics(),
+              physics: const NeverScrollableScrollPhysics(),
               itemCount: controller.jeweleryList.length,
               itemBuilder: (context, index) {
                 return buildCard(index);
-              }, gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              }, gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 2, // number of items in each row
               mainAxisSpacing: 8.0, // spacing between rows
               crossAxisSpacing: 8.0, // spacing between columns
             ),
             ),
             Container(
-              padding: EdgeInsets.all(8.0),
-              margin: EdgeInsets.all(8.0),
+              padding: const EdgeInsets.all(8.0),
+              margin: const EdgeInsets.all(8.0),
               width: deviceWidth,
               height: 50,
               color: Appcolors.c2,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text("Electronics",
+                  const Text("Electronics",
                     style: TextStyle(fontSize: 14, fontWeight: FontWeight
                         .bold, color: Appcolors.c3),),
                   IconButton(onPressed: () {
 
                   },
-                    icon: Icon(
+                    icon: const Icon(
                       Icons.arrow_right_alt_outlined, color: Colors.green,),),
                 ],
               ),
             ),
             GridView.builder(
               shrinkWrap: true,
-              physics: NeverScrollableScrollPhysics(),
+              physics: const NeverScrollableScrollPhysics(),
               itemCount: controller.electronicsList.length,
               itemBuilder: (context, index) {
                 return buildCard01(index);
-              }, gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              }, gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 2, // number of items in each row
               mainAxisSpacing: 8.0, // spacing between rows
               crossAxisSpacing: 8.0, // spacing between columns
             ),
             ),
             Container(
-              padding: EdgeInsets.all(8.0),
-              margin: EdgeInsets.all(8.0),
+              padding: const EdgeInsets.all(8.0),
+              margin: const EdgeInsets.all(8.0),
               width: deviceWidth,
               height: 50,
               color: Appcolors.c2,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text("Women's clothing",
+                  const Text("Women's clothing",
                     style: TextStyle(fontSize: 14, fontWeight: FontWeight
                         .bold, color: Appcolors.c3),),
                   IconButton(onPressed: () {
 
                   },
-                    icon: Icon(
+                    icon: const Icon(
                       Icons.arrow_right_alt_outlined, color: Colors.green,),),
                 ],
               ),
             ),
             GridView.builder(
               shrinkWrap: true,
-              physics: NeverScrollableScrollPhysics(),
+              physics: const NeverScrollableScrollPhysics(),
               itemCount: controller.womenClothList.length,
               itemBuilder: (context, index) {
                 return buildCard02(index);
-              }, gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              }, gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 2, // number of items in each row
               mainAxisSpacing: 8.0, // spacing between rows
               crossAxisSpacing: 8.0, // spacing between columns
             ),
             ),
             Container(
-              padding: EdgeInsets.all(8.0),
-              margin: EdgeInsets.all(8.0),
+              padding: const EdgeInsets.all(8.0),
+              margin: const EdgeInsets.all(8.0),
               width: deviceWidth,
               height: 50,
               color: Appcolors.c2,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  Text("Men's clothing",
+                  const Text("Men's clothing",
                     style: TextStyle(fontSize: 14, fontWeight: FontWeight
                         .bold, color: Appcolors.c3),),
                   IconButton(onPressed: () {
 
                   },
-                    icon: Icon(
+                    icon: const Icon(
                       Icons.arrow_right_alt_outlined, color: Colors.green,),),
                 ],
               ),
             ),
             GridView.builder(
               shrinkWrap: true,
-              physics: NeverScrollableScrollPhysics(),
+              physics: const NeverScrollableScrollPhysics(),
               itemCount: controller.menClothList.length,
               itemBuilder: (context, index) {
                 return buildCard03(index);
-              }, gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+              }, gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 2, // number of items in each row
               mainAxisSpacing: 8.0, // spacing between rows
               crossAxisSpacing: 8.0, // spacing between columns
@@ -181,7 +180,7 @@ class HomePage extends GetView<HomeController> {
               left: 0,
               right: 0,
               child: Container(
-                padding: EdgeInsets.all(8),
+                padding: const EdgeInsets.all(8),
                 color: Colors.black.withOpacity(0.60),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -191,19 +190,19 @@ class HomePage extends GetView<HomeController> {
                     Text(controller.jeweleryList[index].title ?? "No Name",
                       overflow: TextOverflow.ellipsis,
                       maxLines: 2,
-                      style: TextStyle(fontSize: 12, color: Appcolors.c3,),),
+                      style: const TextStyle(fontSize: 12, color: Appcolors.c3,),),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text("USD ${controller.jeweleryList[index].price}" ??
                             "0.00",
-                          style: TextStyle(fontSize: 14, fontWeight: FontWeight
+                          style: const TextStyle(fontSize: 14, fontWeight: FontWeight
                               .bold, color: Appcolors.c3),),
                         IconButton(onPressed: () {
                           print(
                               controller.jeweleryList[index].price);
                         },
-                          icon: Icon(
+                          icon: const Icon(
                             Icons.add_shopping_cart_outlined, color: Colors.green,),),
                       ],
                     ),
@@ -241,7 +240,7 @@ class HomePage extends GetView<HomeController> {
               left: 0,
               right: 0,
               child: Container(
-                padding: EdgeInsets.all(8),
+                padding: const EdgeInsets.all(8),
                 color: Colors.black.withOpacity(0.60),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -251,19 +250,19 @@ class HomePage extends GetView<HomeController> {
                     Text(controller.electronicsList[index].title ?? "No Name",
                       overflow: TextOverflow.ellipsis,
                       maxLines: 2,
-                      style: TextStyle(fontSize: 12, color: Appcolors.c3,),),
+                      style: const TextStyle(fontSize: 12, color: Appcolors.c3,),),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text("USD ${controller.electronicsList[index].price}" ??
                             "0.00",
-                          style: TextStyle(fontSize: 14, fontWeight: FontWeight
+                          style: const TextStyle(fontSize: 14, fontWeight: FontWeight
                               .bold, color: Appcolors.c3),),
                         IconButton(onPressed: () {
                           print(
                               controller.electronicsList[index].price);
                         },
-                          icon: Icon(
+                          icon: const Icon(
                             Icons.add_shopping_cart_outlined, color: Colors.green,),),
                       ],
                     ),
@@ -301,7 +300,7 @@ class HomePage extends GetView<HomeController> {
               left: 0,
               right: 0,
               child: Container(
-                padding: EdgeInsets.all(8),
+                padding: const EdgeInsets.all(8),
                 color: Colors.black.withOpacity(0.60),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -311,19 +310,19 @@ class HomePage extends GetView<HomeController> {
                     Text(controller.womenClothList[index].title ?? "No Name",
                       overflow: TextOverflow.ellipsis,
                       maxLines: 2,
-                      style: TextStyle(fontSize: 12, color: Appcolors.c3,),),
+                      style: const TextStyle(fontSize: 12, color: Appcolors.c3,),),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text("USD ${controller.womenClothList[index].price}" ??
                             "0.00",
-                          style: TextStyle(fontSize: 14, fontWeight: FontWeight
+                          style: const TextStyle(fontSize: 14, fontWeight: FontWeight
                               .bold, color: Appcolors.c3),),
                         IconButton(onPressed: () {
                           print(
                               controller.womenClothList[index].price);
                         },
-                          icon: Icon(
+                          icon: const Icon(
                             Icons.add_shopping_cart_outlined, color: Colors.green,),),
                       ],
                     ),
@@ -361,7 +360,7 @@ class HomePage extends GetView<HomeController> {
               left: 0,
               right: 0,
               child: Container(
-                padding: EdgeInsets.all(8),
+                padding: const EdgeInsets.all(8),
                 color: Colors.black.withOpacity(0.60),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -371,19 +370,19 @@ class HomePage extends GetView<HomeController> {
                     Text(controller.menClothList[index].title ?? "No Name",
                       overflow: TextOverflow.ellipsis,
                       maxLines: 2,
-                      style: TextStyle(fontSize: 12, color: Appcolors.c3,),),
+                      style: const TextStyle(fontSize: 12, color: Appcolors.c3,),),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text("USD ${controller.menClothList[index].price}" ??
                             "0.00",
-                          style: TextStyle(fontSize: 14, fontWeight: FontWeight
+                          style: const TextStyle(fontSize: 14, fontWeight: FontWeight
                               .bold, color: Appcolors.c3),),
                         IconButton(onPressed: () {
                           print(
                               controller.menClothList[index].price);
                         },
-                          icon: Icon(
+                          icon: const Icon(
                             Icons.add_shopping_cart_outlined, color: Colors.green,),),
                       ],
                     ),
@@ -421,7 +420,7 @@ class HomePage extends GetView<HomeController> {
               left: 0,
               right: 0,
               child: Container(
-                padding: EdgeInsets.all(8),
+                padding: const EdgeInsets.all(8),
                 color: Colors.black.withOpacity(0.60),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
@@ -431,19 +430,19 @@ class HomePage extends GetView<HomeController> {
                     Text(controller.womenClothList[index].title ?? "No Name",
                       overflow: TextOverflow.ellipsis,
                       maxLines: 2,
-                      style: TextStyle(fontSize: 12, color: Appcolors.c3,),),
+                      style: const TextStyle(fontSize: 12, color: Appcolors.c3,),),
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         Text("USD ${controller.womenClothList[index].price}" ??
                             "0.00",
-                          style: TextStyle(fontSize: 14, fontWeight: FontWeight
+                          style: const TextStyle(fontSize: 14, fontWeight: FontWeight
                               .bold, color: Appcolors.c3),),
                         IconButton(onPressed: () {
                           print(
                               controller.womenClothList[index].price);
                         },
-                          icon: Icon(
+                          icon: const Icon(
                             Icons.add_shopping_cart_outlined, color: Colors.green,),),
                       ],
                     ),

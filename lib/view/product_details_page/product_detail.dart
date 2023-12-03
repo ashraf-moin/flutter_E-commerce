@@ -91,6 +91,7 @@ class ProductDetailsPage extends GetView<ProductDetailController> {
                   left: 0,
                   right: 0,
                   child: ElevatedButton(
+
                       onPressed: () {
                         ScaffoldMessenger.of(context).showSnackBar(
                             SnackBar(
@@ -98,6 +99,11 @@ class ProductDetailsPage extends GetView<ProductDetailController> {
                           backgroundColor: Appcolors.c2,
                         ));
                       },
+                      style: ElevatedButton.styleFrom(
+                      backgroundColor: Appcolors.c1, // background
+                         // foreground
+                      ),
+
                       child: const Text('Add To Cart')))
             ],
           ),
