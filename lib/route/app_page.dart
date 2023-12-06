@@ -1,6 +1,8 @@
 import 'package:ecommerce/route/app_routes.dart';
 import 'package:ecommerce/view/all_product_page/all_product_page.dart';
 import 'package:ecommerce/view/all_product_page/all_product_page_binding.dart';
+import 'package:ecommerce/view/cart_page/cart_binding.dart';
+import 'package:ecommerce/view/cart_page/cart_page.dart';
 import 'package:ecommerce/view/home_page/home_page.dart';
 import 'package:ecommerce/view/home_page/home_binding.dart';
 import 'package:ecommerce/view/login_page/loginbinding.dart';
@@ -29,7 +31,10 @@ class AppPages {
         name: AppRoutes.PRODUCTDRETAILS,
         page: () => const ProductDetailsPage(),
         binding: ProductDetailBinding()),
-
+    GetPage(
+        name: AppRoutes.CART,
+        page: () => const CartPage(),
+        binding: CartBinding()),
 
   ];
 }

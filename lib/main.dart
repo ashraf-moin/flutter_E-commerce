@@ -30,7 +30,6 @@ class MyApp extends StatelessWidget {
         useMaterial3: false,
         fontFamily: "Poppins",
       ),
-
         initialRoute: AppRoutes.LOGIN,
         getPages: AppPages.pages,
     );
