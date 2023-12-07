@@ -74,6 +74,7 @@ class LoginPage extends GetView<LoginController> {
                     right: 16,
                     child: ElevatedButton(
                         onPressed: () {
+
                           Get.offAllNamed(AppRoutes.HOME);
                           controller
                               .setLoginInfo(controller.emailController.text,

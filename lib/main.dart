@@ -1,3 +1,4 @@
+import 'package:ecommerce/Bindings/initBinding.dart';
 import 'package:ecommerce/route/app_page.dart';
 import 'package:ecommerce/route/app_routes.dart';
 import 'package:ecommerce/view/home_page/home_page.dart';
@@ -32,6 +33,7 @@ class MyApp extends StatelessWidget {
       ),
         initialRoute: AppRoutes.LOGIN,
         getPages: AppPages.pages,
+        initialBinding: InitialBinding(),
     );
   }
 }

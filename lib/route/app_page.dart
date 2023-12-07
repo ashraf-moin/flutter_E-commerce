@@ -35,6 +35,5 @@ class AppPages {
         name: AppRoutes.CART,
         page: () => const CartPage(),
         binding: CartBinding()),
-
   ];
 }
