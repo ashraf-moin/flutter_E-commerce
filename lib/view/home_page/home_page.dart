@@ -35,7 +35,9 @@ class HomePage extends GetView<HomeController> {
                           color: Appcolors.c3),
                     ),
                     IconButton(
-                      onPressed: () {Get.toNamed(AppRoutes.ALLPRODUCT);},
+                      onPressed: () {
+                        Get.toNamed(AppRoutes.ALLPRODUCT);
+                      },
                       icon: const Icon(
                         Icons.arrow_right_alt_outlined,
                         color: Colors.green,
@@ -74,7 +76,9 @@ class HomePage extends GetView<HomeController> {
                           color: Appcolors.c3),
                     ),
                     IconButton(
-                      onPressed: () {Get.toNamed(AppRoutes.ALLPRODUCT);},
+                      onPressed: () {
+                        Get.toNamed(AppRoutes.ALLPRODUCT);
+                      },
                       icon: const Icon(
                         Icons.arrow_right_alt_outlined,
                         color: Colors.green,
@@ -113,7 +117,9 @@ class HomePage extends GetView<HomeController> {
                           color: Appcolors.c3),
                     ),
                     IconButton(
-                      onPressed: () {Get.toNamed(AppRoutes.ALLPRODUCT);},
+                      onPressed: () {
+                        Get.toNamed(AppRoutes.ALLPRODUCT);
+                      },
                       icon: const Icon(
                         Icons.arrow_right_alt_outlined,
                         color: Colors.green,
@@ -536,10 +542,8 @@ class HomePage extends GetView<HomeController> {
   AppBar myAppBar() {
     return AppBar(
       title: const Text('Home page', style: TextStyle(color: Colors.white)),
-
       backgroundColor: Appcolors.c1,
       actions: [
-
         IconButton(
             onPressed: () {
               Get.toNamed(
