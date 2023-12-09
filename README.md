@@ -7,8 +7,8 @@ This Flutter app is designed for an e-commerce platform, showcasing various prod
 
 - Home Page
 - ALL Product Page
-- Cart
 - Product details Page
+- Cart
 
 
 ## Packages
@@ -39,5 +39,11 @@ This Flutter app is designed for an e-commerce platform, showcasing various prod
 
 ## Screenshots
 
-![App Screenshot](https://via.placeholder.com/468x300?text=App+Screenshot+Here)
-
+<img src="Screenshort/Screenshot_1.jpg" alt="Image description" height="600">
+<img src="Screenshort/Screenshot_2.jpg" alt="Image description" height="600">
+<img src="Screenshort/Screenshot_3.jpg" alt="Image description" height="600">
+<img src="Screenshort/Screenshot_4.jpg" alt="Image description" height="600">
+<img src="Screenshort/Screenshot_5.jpg" alt="Image description" height="600">
+<img src="Screenshort/Screenshot_6.jpg" alt="Image description" height="600">
+<img src="Screenshort/Screenshot_7.jpg" alt="Image description" height="600">
+<img src="Screenshort/Screenshot_8.jpg" alt="Image description" height="600">
