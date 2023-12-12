@@ -41,6 +41,8 @@ dependencies:
   sliver_tools: ^0.2.5
   sqflite: ^2.3.0
   path: ^1.8.3
+  flutter_local_notifications: ^16.2.0
+
 
 dev_dependencies:
 

@@ -1,10 +1,11 @@
 
 import 'dart:ffi';
-
+import 'dart:async';
 import 'package:ecommerce/data/db/sqlite_manager.dart';
 import 'package:ecommerce/data/db/sqlite_table.dart';
 import 'package:ecommerce/main.dart';
 import 'package:ecommerce/model/product_model.dart';
+import 'package:ecommerce/services/localNotification.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:path/path.dart';
@@ -44,9 +45,13 @@ double totalPrice(int index){
   }
 
  void checkOut(){
-    dbManager.deleteAllItem(tableProduct);
-    ScaffoldMessenger.of(Get.context!).showSnackBar(const SnackBar(content: Text('CheckOut complete'),backgroundColor: Appcolors.c2,));
-    Get.back();
+   LocalNotificationService.loadNotification(title: 'Checkout done', body: 'Successfully Payment complete ');
+   Timer(Duration(seconds:2 ), () {
+     dbManager.deleteAllItem(tableProduct);
+     ScaffoldMessenger.of(Get.context!).showSnackBar(const SnackBar(content: Text('CheckOut complete'),backgroundColor: Appcolors.c2,));
+     Get.back();
+   });
+
 
     
 }
