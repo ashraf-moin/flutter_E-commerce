@@ -28,8 +28,12 @@ This Flutter app is designed for an e-commerce platform, showcasing various prod
 
 - **sqflite (^2.3.0)**: A Flutter plugin for SQLite, which can be used for local database storage. This might be used for storing more structured or larger amounts of data locally, like product information or user orders.
 
-- **path (^1.8.3)**: A package providing methods to work with file system paths. This could be used in conjunction with SQLite to manage database files or with other functionalities requiring file path manipulation.# Color Reference
+- **path (^1.8.3)**: A package providing methods to work with file system paths. This could be used in conjunction with SQLite to manage database files or with other functionalities requiring file path manipulation.
 
+- **flutter_local_notifications (^16.2.0)**: Allows for displaying local notifications within the app. In an e-commerce context, this could be used for order updates, promotions, etc.
+
+
+# Color Reference
 | Color             | Hex                                                                |
 | ----------------- | ------------------------------------------------------------------ |
 | Example Color |  #9381ff |
@@ -47,3 +51,4 @@ This Flutter app is designed for an e-commerce platform, showcasing various prod
 <img src="Screenshort/Screenshot_6.jpg" alt="Image description" height="600">
 <img src="Screenshort/Screenshot_7.jpg" alt="Image description" height="600">
 <img src="Screenshort/Screenshot_8.jpg" alt="Image description" height="600">
+<img src="Screenshort/Screenshot_9.jpg" alt="Image description" height="600">
