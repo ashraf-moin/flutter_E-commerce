@@ -32,10 +32,15 @@ This Flutter app is designed for an e-commerce platform, showcasing various prod
 
 - **flutter_local_notifications (^16.2.0)**: Allows for displaying local notifications within the app. In an e-commerce context, this could be used for order updates, promotions, etc.
 
+- **firebase_core (^2.24.2)**: Firebase Core is the starting point for Firebase Flutter plugins. It's necessary for Firebase functionality to work in a Flutter app. It initializes the necessary Firebase services.
 
-# Color Reference
-| Color             | Hex                                                                |
-| ----------------- | ------------------------------------------------------------------ |
+- **firebase_messaging (^14.7.9)**: Firebase Cloud Messaging (FCM) allows you to send notifications and messages to users across platforms. It enables you to send messages to your app users while the app is in the foreground, background, or even closed.
+
+
+
+## Color Reference
+| Color             | Hex  |
+| ----------------- | -----|
 | Example Color |  #9381ff |
 | Example Color |  #b8b8ff |
 | Example Color |  #00b48a |
