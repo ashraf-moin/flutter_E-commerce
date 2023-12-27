@@ -2,6 +2,7 @@ import 'package:ecommerce/Bindings/initBinding.dart';
 import 'package:ecommerce/route/app_page.dart';
 import 'package:ecommerce/route/app_routes.dart';
 import 'package:ecommerce/view/home_page/home_page.dart';
+import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -13,7 +14,14 @@ class Appcolors {
 }
 
 
-void main() {
+void main() async {
+
+
+
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp();
+
+
   runApp(const MyApp());
 }
 
