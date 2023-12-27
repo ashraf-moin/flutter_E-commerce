@@ -1,5 +1,6 @@
 import 'package:ecommerce/data/db/sqlite_manager.dart';
 import 'package:ecommerce/data/db/sqlite_manager_impl.dart';
+import 'package:ecommerce/services/fcm.dart';
 import 'package:ecommerce/services/localNotification.dart';
 import 'package:get/get.dart';
 
@@ -16,6 +17,12 @@ class InitialBinding implements Bindings {
     permanent: true
 
     );
+    Get.putAsync(() async => FirebaseService(),
+        tag: (FirebaseService).toString(),
+        permanent: true
+
+    );
+
 
   }
 
