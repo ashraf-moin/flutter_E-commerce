@@ -36,6 +36,7 @@ This Flutter app is designed for an e-commerce platform, showcasing various prod
 
 - **firebase_messaging (^14.7.9)**: Firebase Cloud Messaging (FCM) allows you to send notifications and messages to users across platforms. It enables you to send messages to your app users while the app is in the foreground, background, or even closed.
 
+- **flutter_dotenv (^5.1.0)**: Allows you to load environment variables from a .env file. Useful for managing sensitive data or configuration settings.
 
 
 ## Color Reference
