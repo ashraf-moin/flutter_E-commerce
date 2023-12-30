@@ -45,7 +45,7 @@ class FirebaseService extends GetxService {
     FirebaseMessaging.onMessageOpenedApp.listen(_fcmlistener);
 
 
-    FirebaseMessaging.onBackgroundMessage( _fcmBackgroundHandler);
+    FirebaseMessaging.onBackgroundMessage(_fcmBackgroundHandler);
 
 
 

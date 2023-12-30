@@ -42,6 +42,9 @@ class LoginController extends GetxController{
 
 
   }
+
+
+
   @override
   void dispose() {
     // TODO: implement dispose
@@ -49,12 +52,5 @@ class LoginController extends GetxController{
     passwordController.dispose();
     super.dispose();
   }
-  
-  
-  @override
-  void onInit() {
-    // TODO: implement onInit
-    print(dotenv.env['ENDPOINTURL']);
-    super.onInit();
-  }
+
 }

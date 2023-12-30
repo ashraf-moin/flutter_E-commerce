@@ -33,15 +33,15 @@ static Future<List<ProductModel>> getAllCategoriesList() async{
     rethrow;
   }
 }
-static Future<List<ProductModel>> getAllCategoriesJeweleryList() async{
-  try{
-    Response response = await _dio.get(ApiEndPoint.ALL_PRODUCT_JEWELERY);
-    var result = json.encode(response.data);
-    return productModelFromJson(result);
-  }catch (error){
-    rethrow;
-  }
-}
+// static Future<List<ProductModel>> getAllCategoriesJeweleryList() async{
+//   try{
+//     Response response = await _dio.get(ApiEndPoint.ALL_PRODUCT_JEWELERY);
+//     var result = json.encode(response.data);
+//     return productModelFromJson(result);
+//   }catch (error){
+//     rethrow;
+//   }
+// }
 static Future<List<ProductModel>> getAllCategoriesElectronicsList() async {
   try {
     Response response = await _dio.get(ApiEndPoint.ALL_PRODUCT_ELECTRONICS);
