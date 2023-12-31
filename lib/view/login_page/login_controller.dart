@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:get/get.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 
@@ -47,5 +48,13 @@ class LoginController extends GetxController{
     emailController.dispose();
     passwordController.dispose();
     super.dispose();
+  }
+  
+  
+  @override
+  void onInit() {
+    // TODO: implement onInit
+    print(dotenv.env['ENDPOINTURL']);
+    super.onInit();
   }
 }

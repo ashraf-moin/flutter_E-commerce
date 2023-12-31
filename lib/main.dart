@@ -4,6 +4,7 @@ import 'package:ecommerce/route/app_routes.dart';
 import 'package:ecommerce/view/home_page/home_page.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 import 'package:get/get.dart';
 
 
@@ -16,10 +17,10 @@ class Appcolors {
 
 void main() async {
 
-
+  // await dotenv.load(fileName: ".env");
 
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp();
+  // await Firebase.initializeApp();
 
 
   runApp(const MyApp());
