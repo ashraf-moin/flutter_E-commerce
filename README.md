@@ -8,7 +8,11 @@ This Flutter app is designed for an e-commerce platform, showcasing various prod
 - Home Page
 - ALL Product Page
 - Product details Page
-- Cart
+- add to cart
+- Cart page
+- Total amount 
+- Notification
+- Firebase Notification
 
 
 ## Packages
